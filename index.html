@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <!--Bootstrap-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+  
+  <div class="panel panel-defaul">
+    <div class="panel-heading">
+      <h3 class="panel-title">Car Maintenance Schedule</h3>
+    </div>
+    <div class="panel-body">
+        <span class="label label-default"> Year: </span>
+        <select id="year" >
+          <option selected disabled>Select Year</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+          <option value="2009">2009</option>
+        </select>
+        <br />
+        <span class="label label-default"> Make:</span>
+        <select id="make" disabled>
+          <option selected>Select Make</option>
+        </select><br />
+        <div id="make_error"></div>
+        <span class="label label-default"> Model:</span>
+        <select id="model" disabled>
+          <option selected>Select Model</option>
+        <div id="model_error"></div>
+        </select> <br />
+        <span class="label label-default"> Trim:</span>
+        <select id="trim" disabled>
+          <option selected>Select Trim</option>
+        </select> <br />
+        <div id="trim_error"></div>
+        <span class="label label-default"> Transmission:: </span>
+        <select id="transmission" disabled>
+          <option selected>Select Transmission</option>
+        </select>
+        <br />
+        <div id="transmission_error"></div>
+        <span class="label label-default"> Engine:</span>
+        <select id="engine" disabled>
+          <option selected>Select Engine</option>
+        </select>
+        <br />
+        <div id="engine_error"></div>
+        <span class="label label-default"> Current Mileage: </span>
+        <input id="current_mileage" value="45000" />
+        <br />
+        <div id="mileage_error"></div>
+        <span class="label label-default"> Zip Code:</span>
+        <input id="zip_code" value="94303" />
+        <br />
+        <div id="zip_code_error"></div>
+        <button disabled id="submit">Submit</button>
+        <br />
+        <table id="parts_table" class="table" style="visibility:hidden">
+          <thead>
+            <tr>
+              <th>Parts</th> 
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <table id="labor_table" class="table" style="visibility:hidden">
+          <thead>
+            <tr>
+              <th>Labor Action</th> 
+              <th>Item</th> 
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <table id="cost_table" class="table table-striped" style="visibility:hidden">
+          <thead>
+            <tr>
+              <th>Total Estimated Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> Total Estimated Parts Cost For Your Area </td>
+            </tr>
+            <tr>
+              <td> Total Estimated Labor Cost For Your Area </td>
+            </tr>
+            <tr>
+              <td> Total Estimated Cost For Your Area </td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="table_error"><div>
+      </div>
+    </div>
+  </body>
+  <script src="./maintenance.js"></script>
+</html>
+
